@@ -5,7 +5,15 @@ body {
     min-height: 10vh;
     background-position: center;
     background-color: white;
-    font-family: 'Lobster', cursive;
+    font-family: 'Poltawski Nowy', serif;
+    margin: 0px;
+}
+
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 h1 {
@@ -15,6 +23,7 @@ h1 {
     font-size: 50px;
     font-weight: bold;
     padding: 20px;
+    align-self: center;
 }
 
 h2 {
@@ -23,6 +32,12 @@ h2 {
     -webkit-background-clip: text;
     font-size: 30px;
     font-weight: bold;
+}
+
+.text {
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 section {
@@ -36,6 +51,25 @@ section {
     font-size: 20px;
 }
 
+.leaveMessage {
+    background-color: aliceblue;
+    width: 500px;
+    text-align: center;
+    margin-top: 110px;
+}
+
+#messages {
+    background-color: aliceblue;
+    width: 500px;
+    text-align: center;
+    /* margin-top: 110px; */
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
 footer {
     background-color: #207FB4;
     text-align: center;
@@ -47,6 +81,8 @@ img {
     border-style: inset;
     border-radius: 150px;
     box-shadow: 10px 5px 10px #207FB4;
+    margin-top: 80px;
+    margin-right: 60px;
 }
 
 input, textarea {
@@ -72,21 +108,41 @@ button:hover {
     cursor: pointer;
 }
 
-.nav-item {
-    display: inline;
-    padding: 5px;
+.remove {
+    margin-left: 40px;
 }
 
 .navbar {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     background-color: #207FB4;
     width: 100%;
-    padding: 5px;
+    padding: 15px;
     margin: 0;
     display: flex;
     justify-content: space-evenly;
+}
+
+.nav-item {
+    display: inline;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+    font-size: 30px;
+}
+
+a {
+    color: #083653;
+    text-decoration: none;
+}
+
+.skillsLi {
+    color: white;
+    text-shadow: 1px 1px 2px white, 0 0 25px #083653, 0 0 5px #207FB4;
 }
 
 #skills {
@@ -135,6 +191,12 @@ button:hover {
     border-bottom: 1px dashed #083653;
 }
 
+#myVideo {
+    width: 100%;
+    margin: 0;
+}
+
+
 
 @media all and (max-width: 800px) {
     h1 {
@@ -146,25 +208,35 @@ button:hover {
     img {
         margin-left: 90px;
     }
+
+    #skills li:hover {
+        background-color: #207FB4;
+        color: #083653;
+        cursor: pointer;
+    }
 }
 
 @media all and (max-width: 500px) {
     h1 {
         font-size: 30px;
         font-weight: bold;
-        margin-top: 30px;
     }
 
     img {
         align-self: center;
     }
 
+    .flex {
+        flex-direction: column;
+    }
+
     #skills li {
         padding: 5px;
     }
 
-    label {
-        color: white;
+    .nav-item {
+        font-size: 13px;
     }
-
 }
+
+
